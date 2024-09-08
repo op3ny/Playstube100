@@ -25,10 +25,10 @@ The another things, the installer will do for you!
 
 # New commands!
 ```
-livepub-start
+playstube-start
 ```
 ```
-livepub-stop
+playstube-stop
 ```
 
 # Things witch you need to change
