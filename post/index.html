@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Vídeo</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <div class="card shadow-sm">
+                    <div class="card-header bg-primary text-white text-center">
+                        <h2>Upload de Vídeo</h2>
+                    </div>
+                    <div class="card-body">
+                        <form action="http://hsyst.com.br:8080/upload" method="post" enctype="multipart/form-data">
+                            <div class="mb-3">
+                                <label for="channel" class="form-label">Nome do Canal:</label>
+                                <input type="text" class="form-control" id="channel" name="channel" required placeholder="Digite o nome do canal">
+                            </div>
+                            <div class="mb-3">
+                                <label for="file" class="form-label">Escolha o arquivo (somente .mp4):</label>
+                                <input class="form-control" type="file" id="file" name="file" accept="video/mp4" required>
+                            </div>
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-success">Enviar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
