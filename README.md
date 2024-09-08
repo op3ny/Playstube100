@@ -9,15 +9,27 @@ Before we start, we need to test the platform, for that, you can acess (http://h
 
 # Installation
 
-```sudo apt update && apt upgrade -y```
-```wget https://github.com/Hsyst/Playstube/raw/main/installator.sh```
-```sudo chmod 777 installator.sh```
-```./installator.sh```
+```
+sudo apt update && apt upgrade -y
+```
+```
+wget https://github.com/Hsyst/Playstube/raw/main/installator.sh
+```
+```
+sudo chmod 777 installator.sh
+```
+```
+./installator.sh
+```
 The another things, the installer will do for you!
 
 # New commands!
-```livepub-start```
-```livepub-stop```
+```
+livepub-start
+```
+```
+livepub-stop
+```
 
 # Things witch you need to change
 `/var/www/html/index.html - Line 17, 18, 19 (hsyst.com.br to your local or public ip)`
