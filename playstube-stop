@@ -1,0 +1,22 @@
+clear
+echo "Rebooting in 10..."
+sleep 1
+echo "Rebooting in 9..."
+sleep 1
+echo "Rebooting in 8..."
+sleep 1
+echo "Rebooting in 7..."
+sleep 1
+echo "Rebooting in 6..."
+sleep 1
+echo "Rebooting in 5..."
+sleep 1
+echo "Rebooting in 4..."
+sleep 1
+echo "Rebooting in 3..."
+sleep 1
+echo "Rebooting in 2..."
+sleep 1
+echo "Rebooting in 1..."
+sleep 1
+reboot
