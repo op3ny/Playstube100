@@ -1,0 +1,5 @@
+clear
+echo "Running create channel service..."
+python3 /var/www/html/post/main.py &
+sleep 2
+clear
