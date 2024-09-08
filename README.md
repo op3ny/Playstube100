@@ -13,6 +13,9 @@ Before we start, we need to test the platform, for that, you can acess [Click He
 sudo apt update && apt upgrade -y
 ```
 ```
+sudo apt install wget curl -y
+```
+```
 wget https://github.com/Hsyst/Playstube/raw/main/installator.sh
 ```
 ```
