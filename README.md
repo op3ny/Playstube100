@@ -5,7 +5,7 @@ Hello, my name is Humberto, and this is LivePub. As you can see, this have pytho
 
 # The code
 
-Before we start, we need to test the platform, for that, you can acess (Click Here)[http://hsyst.com.br/livepub]
+Before we start, we need to test the platform, for that, you can acess [Click here](http://hsyst.com.br/livepub)
 
 # Installation
 
