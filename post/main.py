@@ -1,14 +1,17 @@
 import os
 from flask import Flask, request
+from flask_cors import CORS
 
 app = Flask(__name__)
+
+# Habilita CORS para todas as rotas e origens
+CORS(app)
+
 UPLOAD_FOLDER = '/var/www/html/playstube/video'
 
-# Configurando o diretório de upload
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
 ALLOWED_EXTENSIONS = {'mp4'}
 
-# Função para verificar se a extensão é permitida
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
@@ -18,12 +21,14 @@ def upload_file():
         return 'Nenhum arquivo foi enviado', 400
 
     file = request.files['file']
-    channel_name = request.form['channel']
+    channel_name = request.form.get('channel', '').strip()
+
+    if not channel_name:
+        return 'Nome do canal é obrigatório', 400
 
     if file.filename == '':
         return 'Nenhum arquivo selecionado', 400
 
-    # Verifica se a extensão do arquivo é .mp4
     if not allowed_file(file.filename):
         return 'Apenas arquivos .mp4 são permitidos', 400
 
@@ -35,7 +40,8 @@ def upload_file():
     file_path = os.path.join(channel_dir, file.filename)
     file.save(file_path)
 
-    return f'Vídeo enviado no canal especificado com sucesso! O nome do canal e a pasta, e o video esta dentro da pasta. <br> (Obs:. Para deletar seu video, pedimos para entrar em contato com op3n@hsyst.com.br "Webmaster")', 200
+    return ('Vídeo enviado no canal especificado com sucesso! O nome do canal e a pasta, e o vídeo está dentro da pasta.<br>'
+            '(Obs:. Para deletar seu vídeo, pedimos para entrar em contato com op3n@hsyst.com.br "Webmaster")'), 200
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0', port=8080)
