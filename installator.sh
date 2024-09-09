@@ -5,7 +5,9 @@ clear
 echo "Installing..."
 echo "Type your password below: "
 sudo apt update && apt upgrade -y
-sudo apt install apache2 unzip -y
+sudo apt install apache2 python3-full unzip -y
+sudo apt install python3-flask-cors -y
+pip install flask_cors
 wget https://github.com/Hsyst/Playstube/raw/main/playstube-zipped.zip
 sudo mv playstube-zipped.zip pla.zip
 sudo chmod 777 pla.zip
