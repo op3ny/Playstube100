@@ -40,7 +40,7 @@ def upload_file():
     file_path = os.path.join(channel_dir, file.filename)
     file.save(file_path)
 
-    return ('Vídeo enviado no canal especificado com sucesso! O nome do canal e a pasta, e o vídeo está dentro da pasta.<br>'
+    return ('Vídeo enviado no canal especificado com sucesso! O nome do canal é a pasta, e o vídeo está dentro da pasta.'
             '(Obs:. Para deletar seu vídeo, pedimos para entrar em contato com op3n@hsyst.com.br "Webmaster")'), 200
 
 if __name__ == '__main__':
