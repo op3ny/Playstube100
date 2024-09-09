@@ -67,7 +67,12 @@
             // Evento após o upload ser completado
             xhr.onload = function() {
                 if (xhr.status === 200) {
+                    // Exibe a mensagem de sucesso
                     alert('Upload completado com sucesso!');
+                    
+                    // Exibe a resposta do servidor
+                    const serverResponse = xhr.responseText;
+                    alert('Resposta do servidor: ' + serverResponse);
                 } else {
                     alert('Ocorreu um erro durante o upload.');
                 }
