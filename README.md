@@ -5,7 +5,7 @@ Hello, my name is Humberto, and this is LivePub. As you can see, this have pytho
 
 # The code
 
-Before we start, we need to test the platform, for that, you can acess [Click Here](http://hsyst.com.br/playstube)
+Before we start, we need to test the platform, for that, you can acess (that project isn't more avaible)
 
 # Installation
 
@@ -16,7 +16,7 @@ sudo apt update && apt upgrade -y
 sudo apt install wget curl -y
 ```
 ```
-wget https://github.com/Hsyst/Playstube/raw/main/installator.sh
+wget https://github.com/Hsyst/Playstube100/raw/main/installator.sh
 ```
 ```
 sudo chmod 777 installator.sh
